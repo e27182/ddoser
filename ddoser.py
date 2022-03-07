@@ -220,7 +220,7 @@ def merge_headers(custom_headers: str, header: List[Tuple[str, str]]) -> Dict[st
 @click.option('-v', '--verbose', help='Show verbose log', count=True)
 @click.option('--ignore-response', help='do not wait for response body', is_flag=True, default=False)
 @click.option('--with-random-get-param', help='add random get argument to prevent cache usage', is_flag=True, default=False)
-@click.option('--user-agent', help='custom user agent')
+@click.option('--user-agent', help='[OPTIONAL] custom user agent, if skipped - random UA string will be generated for each request')
 @click.option('--log-to-stdout', help='log to console', is_flag=True)
 @click.option('--restart-period', help='period in seconds to restart application (reload proxies ans targets)', type=int)
 @click.option('--random-xff-ip', help='set random ip address value for X-Forwarder-For header', is_flag=True, default=False)
